@@ -2,12 +2,11 @@
 A webapp scaffolding based out of Yeoman webapp Generator [https://github.com/yeoman/generator-webapp] with Twig &amp; Foundation 6.
 
 ### Pre-Requisites
-- **Node**
-- **npm**
-- **bower**
-- **Gulp**
-- **Yeoman**
-- **Sass**
+- **Node - >= v9.3.0**
+- **Npm - >= 5.6.0**
+- **Bower - >= 1.8.2**
+- **GulpCli - >= 3.9.1**
+- **Yeoman - >= 2.0.1**
 
 ### Installation
 ```
