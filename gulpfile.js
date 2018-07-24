@@ -89,7 +89,7 @@ gulp.task('fonts', () => {
 // gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-  runSequence(['wiredep'], ['compile', 'styles', 'scripts', 'fonts'], () => {
+  runSequence(['wiredep'], ['compile', 'build', 'styles', 'scripts', 'images', 'fonts'], () => {
     browserSync.init({
       notify: false,
       port: 9000,
@@ -110,6 +110,7 @@ gulp.task('serve', () => {
     gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/assets/fonts/**/*', ['fonts']);
+    gulp.watch('app/assets/images/**/*', ['images']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
   });
 });
@@ -123,25 +124,6 @@ gulp.task('serve:dist', ['default'], () => {
     }
   });
 });
-
-// gulp.task('serve:test', ['scripts'], () => {
-//   browserSync.init({
-//     notify: false,
-//     port: 9000,
-//     ui: false,
-//     server: {
-//       baseDir: 'test',
-//       routes: {
-//         '/scripts': '.tmp/scripts',
-//         '/bower_components': 'bower_components'
-//       }
-//     }
-//   });
-
-//   gulp.watch('app/scripts/**/*.js', ['scripts']);
-//   gulp.watch(['test/spec/**/*.js', 'test/index.twig']).on('change', reload);
-//   gulp.watch('test/spec/**/*.js', ['lint:test']);
-// });
 
 // inject bower components
 gulp.task('wiredep', () => {
