@@ -6,6 +6,29 @@
   <header>
     <h1>Web Generator, Gulp and Twig.js</h1>
   </header>
+  <aside>
+
+    {#first block#}
+    {% embed "src/partials/block.twig" %}
+      {% set block_name = "test first--block" %}
+      {% set block_id = "blockid" %}
+      {% set block_label = "This is a test block" %}
+      {% block content %}
+        <p>This is the content of the block</p>
+      {% endblock %}
+    {% endembed %}
+
+    {#second block#}
+    {% embed "src/partials/block.twig" %}
+      {% set block_name = "test second--block" %}
+      {% set block_id = "blockidtwo" %}
+      {% set block_label = "This is a second test block" %}
+      {% block content %}
+        <p>This is the content of the second block</p>
+      {% endblock %}
+    {% endembed %}
+
+  </aside>
   <p>
     The copy will have a working implementation of Yeoman Web Generator, Gulp & Twig.js with BrowserSync integrated.
   </p>
