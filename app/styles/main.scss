@@ -1,9 +1,19 @@
-// bower:scss
-@import "bower_components/foundation-sites/scss/foundation.scss";
-// endbower
+/*
+****************************************************************************************************************
+N.B please don't write any styling in this file. This file is used only to import the styles from the framework.
+****************************************************************************************************************
+*/
 
-@import 'partials/settings';
-@import 'partials/foundation';
+/**
+  Main sass file.
+ */
 
-@include foundation-everything;
-
+@import "vendor";
+@import "base";
+@import "settings";
+@import "typography";
+@import "helper";
+@import "components";
+@import "modules";
+@import "layout";
+@import "pages";
