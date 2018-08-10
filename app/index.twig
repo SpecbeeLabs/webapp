@@ -3,6 +3,7 @@
 {% set pageName = 'Homepage' %}
 
 {% block page %}
+<img src="https://cdn-images-1.medium.com/max/2000/1*lpWLZ75HSCAYYQvx0wxYDQ.png" alt="This is the alt text" title="Title of the image"/>
   <header>
     <h1>Web Generator, Gulp and Twig.js</h1>
   </header>
@@ -27,7 +28,7 @@
       {% set block_id = "blockidtwo" %}
       {% set block_label = "This is a second test block" %}
       {% block content %}
-        <p>This is the content of the second block</p>
+        <p>This is the <a href="#">content</a> of the second block</p>
       {% endblock %}
     {% endembed %}
 
@@ -35,7 +36,8 @@
   <section>
     {% include "src/partials/social.twig" %}
   </section>
-  <p>
-    The copy will have a working implementation of Yeoman Web Generator, Gulp & Twig.js with BrowserSync integrated.
-  </p>
+  <section>
+    {% include "src/partials/button.twig" %}
+  </section>
+  
 {% endblock %}

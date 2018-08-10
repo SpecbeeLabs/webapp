@@ -3,11 +3,12 @@
    ========================================================================== */
 /**/
 
-button {
+button, .button {
   display: inline-block;
 	border: none;
 	text-decoration: none;
-	background-color: $accent;
+  background-color: $accent;
+  color: $accent-contrast;
 	padding: 15px 45px;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -17,9 +18,19 @@ button {
 	text-align: center;
 	position: relative;
 	outline: none;
-	transition: background-color .1s ease;
+	@include transition(.25s, all, ease-in-out);
   cursor: pointer;
   &:hover {
-    background-color: lighten($accent, 5%);
+    background-color: darken($accent, 5%);
+    color: $accent-contrast;
+  }
+  &.outline {
+    background: $white;
+    border: 1px solid $accent;
+    color: $accent;
+    &:hover {
+      border-color: darken($accent, 5%);
+      color: darken($accent, 5%);
+    }
   }
 }
