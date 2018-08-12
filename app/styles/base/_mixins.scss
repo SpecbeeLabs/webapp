@@ -2,7 +2,7 @@
    Mixins
    ========================================================================== */
 
-  @mixin box {
+@mixin box {
   border: white 0em solid;
   -webkit-border-radius: 0.15em 0.15em;
   -moz-border-radius: 0.15em / 0.15em;
@@ -47,20 +47,49 @@
   -moz-box-shadow: inset 0px 0px 85px rgba(0, 0, 0, .5);
 }
 
-@mixin transition($delay, $property, $animation) {
-  -webkit-transition: $property $delay $animation;
-  -moz-transition: $property $delay $animation;
-  -ms-transition: $property $delay $animation;
-  -o-transition: $property $delay $animation;
-  transition: $property $delay $animation;
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
 }
 
-@mixin translate($x, $y) {
-  -webkit-transform: translate($x, $y);
-  -moz-transform: translate($x, $y);
-  -ms-transform: translate($x, $y);
-  -o-transform: translate($x, $y);
-  transform: translate($x, $y);
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+// translate
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew ($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+//transform origin
+@mixin transform-origin ($origin) {
+  moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
 }
 
 @mixin opacity($opacity) {
@@ -88,6 +117,7 @@
 // Html5 inputs
 // -------------------------------------------------------
 /*From seven theme.*/
+
 @mixin input() {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -104,6 +134,7 @@
 }
 
 /*From seven theme.*/
+
 @mixin input-focus() {
   color: #000;
   border-color: rgba(0, 116, 189, 0.8);
@@ -115,25 +146,29 @@
 * @include triangle within a pseudo element and add positioning properties (ie. top, left)
 * $direction: up, down, left, right
 */
+
 @mixin triangle($direction, $size: 6px, $color: #222) {
   content: '';
   display: block;
   position: absolute;
   height: 0;
   width: 0;
-  @if ($direction == 'up') {
+  @if ($direction=='up') {
     border-bottom: $size solid $color;
     border-left: 1/2*$size solid transparent;
     border-right: 1/2*$size solid transparent;
-  } @else if ($direction == 'down') {
+  }
+  @else if ($direction=='down') {
     border-top: $size solid $color;
     border-left: 1/2*$size solid transparent;
     border-right: 1/2*$size solid transparent;
-  } @else if ($direction == 'left') {
+  }
+  @else if ($direction=='left') {
     border-top: 1/2*$size solid transparent;
     border-bottom: 1/2*$size solid transparent;
     border-right: $size solid $color;
-  } @else if ($direction == 'right') {
+  }
+  @else if ($direction=='right') {
     border-top: 1/2*$size solid transparent;
     border-bottom: 1/2*$size solid transparent;
     border-left: $size solid $color;
@@ -150,17 +185,4 @@
   &:after {
     clear: both;
   }
-}
-
-
-// Animation
-
-@mixin animate($name, $duration) {
-  animation-name: $name;
-  animation-duration: $duration;
-  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
-  -moz-animation-fill-mode:forwards; /*FF 5+*/
-  -o-animation-fill-mode:forwards; /*Not implemented yet*/
-  -ms-animation-fill-mode:forwards; /*IE 10+*/
-  animation-fill-mode:forwards; /*when the spec is finished*/
 }

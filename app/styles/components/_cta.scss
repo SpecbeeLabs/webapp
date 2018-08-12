@@ -1,0 +1,35 @@
+/*==========================================================================
+CTA
+========================================================================== */
+/**/
+
+// CTA arrow
+@mixin cta() {
+  &:after {
+    content: "\02192";
+    position: absolute;
+    margin-left: .875rem;
+    @include transition(.25s, margin, ease-in-out);
+  }
+  &:hover {
+    &:after {
+      margin-left: 1rem;
+    }
+  }
+}
+
+
+button, .button{
+  &.button--cta {
+    position: relative;
+    padding-right: 3.75rem;
+    padding-left: 2.25rem;
+    @include cta();
+  }
+}
+
+a {
+  &.cta {
+    @include cta();
+  }
+}

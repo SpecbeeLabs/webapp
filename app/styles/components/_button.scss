@@ -9,8 +9,8 @@ button, .button {
 	text-decoration: none;
   background-color: $accent;
   color: $accent-contrast;
-	padding: 15px 45px;
-	font-size: 13px;
+	padding: 1rem 3rem;
+	font-size: .75rem;
 	text-transform: uppercase;
 	font-weight: 600;
 	letter-spacing: 3px;
@@ -24,7 +24,10 @@ button, .button {
     background-color: darken($accent, 5%);
     color: $accent-contrast;
   }
-  &.outline {
+  &.button--rounded {
+    border-radius: 1.5rem;
+  }
+  &.button--outline {
     background: $white;
     border: 1px solid $accent;
     color: $accent;
