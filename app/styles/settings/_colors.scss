@@ -4,25 +4,30 @@
 ********************
 **/
 
-// Brand Colors
-$primary: #2196F3;
-$secondary: #cc0000;
-$tertiary: #3d3d3d;
+/* Brand Colors */
 
+$color--primary: #2196F3;
+$color--secondary: #cc0000;
+$color--tertiary: #3d3d3d;
 // Additional brand colors
 /** Add any additional color supplied in the style guide **/
 
-// Accent colors
-$accent: $secondary;
-$accent-contrast: #fff;
-$selected-text: $accent-contrast;
-$selected-bg: $accent;
+/* Accent colors */
+$color--accent: $secondary;
+$color--accent-contrast: #fff;
+$color--selected-text: $accent-contrast;
+$color--selected-bg: $accent;
 
-// Grayscale colors
-$white: #fff;
-$black: #0f0f0f;
-$whisper: #f2f2f2;
-$light-grey: #a0a0a0;
-$grey: #6a6a6a;
-$dark-grey: #484848;
-$grey-input: #dddddd;
+/* Grayscale colors */
+$color--white: #fff;
+$color--black: #0f0f0f;
+$color--whisper: #f2f2f2;
+$color--light-grey: #a0a0a0;
+$color--grey: #6a6a6a;
+$color--dark-grey: #484848;
+$color--grey-input: #dddddd;
+
+/* Third party brand colors */
+$color--facebook : #03539e;
+$color--twitter : #35ccff;
+$color--linkedin : #217bc1;

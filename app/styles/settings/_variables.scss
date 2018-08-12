@@ -4,15 +4,36 @@
 ********************
 **/
 
-// Font settings
-$sans: "Arial", "Helvetica", "Verdana", sans-serif;
-$serif: "Georgia", "Times New Roman", serif;
-// $icomoon: icomoon
-$title-font: $sans;
-$text-font: $serif;
-$heading: $sans;
-$light: 300;
-$normal: 400;
-$semibold: 600;
-$bold: 800;
+/**
+  * Font sizes and spacing/widths
+  * -----------------------------------------------------------------------------
+  */
 
+/* Font familys */
+$font-family--primary: 'Helvetica Neue',
+'Helvetica',
+'Comic Sans',
+sans-serif;
+$font-family--secondary: 'Georgia',
+'Times New Roman' serif;
+
+/* Font weight */
+$font--light: 300;
+$font--regular: 400;
+$font--semibold: 600;
+$font--bold: 800;
+
+/* Font sizes */
+$font-size--small: rem(14);
+$font-size--base: rem(16);
+$font-size--large: rem(24);
+
+/* Spacings and widths */
+$width-site: rem(1040);
+$grid--gutter: rem(20);
+$spacing--small: .5rem;
+$spacing--medium: 1rem;
+$spacing--large: 1.5rem;
+
+/* Transitions */
+$transition-time--base: .5s;
