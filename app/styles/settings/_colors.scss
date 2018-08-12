@@ -13,10 +13,10 @@ $color--tertiary: #3d3d3d;
 /** Add any additional color supplied in the style guide **/
 
 /* Accent colors */
-$color--accent: $secondary;
+$color--accent: $color--secondary;
 $color--accent-contrast: #fff;
-$color--selected-text: $accent-contrast;
-$color--selected-bg: $accent;
+$color--selected-text: $color--accent-contrast;
+$color--selected-bg: $color--accent;
 
 /* Grayscale colors */
 $color--white: #fff;

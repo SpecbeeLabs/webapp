@@ -3,39 +3,47 @@
 {% set pageName = 'Homepage' %}
 
 {% block page %}
-<img class="not-loaded" src="https://cdn-images-1.medium.com/max/2000/1*lpWLZ75HSCAYYQvx0wxYDQ.png" alt="This is the alt text" title="Title of the image"/>
+<img class="loaded" src="https://cdn-images-1.medium.com/max/2000/1*lpWLZ75HSCAYYQvx0wxYDQ.png" alt="This is the alt text" title="Title of the image"/>
   <header>
     <h1>Web Generator, Gulp and Twig.js</h1>
   </header>
-  <section>
-    {% include "src/partials/social.twig" %}
-  </section>
   <aside>
-
-    {#first block#}
-    {% embed "src/partials/block.twig" %}
-      {% set block_name = "test first--block" %}
-      {% set block_id = "blockid" %}
-      {% set block_label = "This is a test block" %}
-      {% block content %}
-        <p>This is the content of the block</p>
-      {% endblock %}
-    {% endembed %}
-
-    {#second block#}
-    {% embed "src/partials/block.twig" %}
-      {% set block_name = "test second--block" %}
-      {% set block_id = "blockidtwo" %}
-      {% set block_label = "This is a second test block" %}
-      {% block content %}
-        <p>This is the <a href="#">content</a> of the second block</p>
-      {% endblock %}
-    {% endembed %}
-
+    <div class="grid">
+      {#first block#}
+      <div class="grid__item grid--2">
+        {% embed "src/partials/block.twig" %}
+          {% set block_name = "first--block" %}
+          {% set block_id = "blockid" %}
+          {% set block_label = "This is a test block" %}
+          {% block content %}
+            <p>This is the content of the block</p>
+          {% endblock %}
+        {% endembed %}
+      </div>
+      {#second block#}
+      <div class="grid__item grid--4">
+        {% embed "src/partials/block.twig" %}
+          {% set block_name = "second--block" %}
+          {% set block_id = "blockidtwo" %}
+          {% set block_label = "This is a second test block" %}
+          {% block content %}
+            <p>This is the <a href="#">content</a> of the second block</p>
+          {% endblock %}
+        {% endembed %}
+      </div>
+      {# third block #}
+      <div class="grid__item grid--6">
+        {% embed "src/partials/block.twig" %}
+          {% set block_name = "third--block" %}
+          {% set block_id = "blockidthree" %}
+          {% set block_label = "This is a third test block" %}
+          {% block content %}
+            <p>This is the <a href="#">content</a> of the second block</p>
+          {% endblock %}
+        {% endembed %}
+      </div>
+    </div>
   </aside>
-  <section>
-    {% include "src/partials/social.twig" %}
-  </section>
   <section>
     {% include "src/partials/button.twig" %}
   </section>

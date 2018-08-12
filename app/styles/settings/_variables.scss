@@ -24,16 +24,25 @@ $font--semibold: 600;
 $font--bold: 800;
 
 /* Font sizes */
-$font-size--small: rem(14);
-$font-size--base: rem(16);
-$font-size--large: rem(24);
+$font-size--small: .875;
+$font-size--base: 1rem;
+$font-size--large: 1.5rem;
 
 /* Spacings and widths */
-$width-site: rem(1040);
-$grid--gutter: rem(20);
+$layout--container-max-width: 75rem;
+$grid-columns: 12;
+$grid--gutter: .75rem;
 $spacing--small: .5rem;
 $spacing--medium: 1rem;
 $spacing--large: 1.5rem;
 
 /* Transitions */
 $transition-time--base: .5s;
+
+/* Breakpoints */
+$bp-smaller-than-mobile: "max-width: 40rem" !default;
+$bp-smaller-than-tablet: "max-width: 64rem" !default;
+$bp-smaller-than-desktop: "max-width: 75rem" !default;
+$bp-larger-than-mobile: "min-width: 40rem" !default;
+$bp-larger-than-tablet: "min-width: 64rem" !default;
+$bp-larger-than-desktop: "min-width: 75rem" !default;

@@ -1,0 +1,19 @@
+/** Global styling **/
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: $layout--container-max-width;
+  margin: auto;
+  background: $color--white;
+  color: $color--black;
+  font-family: $font-family--primary;
+  font-size: $font-size--base;
+  font-weight: $font--regular;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -5,9 +5,9 @@
 
 a {
   text-decoration: none;
-  color: $accent;
+  color: $color--accent;
   @include transition(.25s, color, ease-in-out);
   &:hover {
-    color: darken($accent, .5);
+    color: darken($color--accent, .5);
   }
 }
