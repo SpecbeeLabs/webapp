@@ -9,6 +9,8 @@
   justify-content: space-between;
   margin-left: -$grid--gutter;
   margin-right: -$grid--gutter;
+  margin-top: -$grid--gutter;
+  margin-bottom: $grid--gutter;
   @include bp-small {
     @if $nowrap==true {
       flex-flow: row nowrap;

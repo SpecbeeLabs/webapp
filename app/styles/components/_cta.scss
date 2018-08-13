@@ -9,7 +9,7 @@ CTA
     content: "\02192";
     position: absolute;
     margin-left: .875rem;
-    @include transition(.25s, margin, ease-in-out);
+    @include transition($transition-time--base margin ease-in-out);
   }
   &:hover {
     &:after {
@@ -18,12 +18,11 @@ CTA
   }
 }
 
-
 button, .button{
   &.button--cta {
     position: relative;
-    padding-right: 3.75rem;
-    padding-left: 2.25rem;
+    padding-right: $button-horizontal-padding + 1;
+    padding-left: $button-horizontal-padding - 1;
     @include cta();
   }
 }

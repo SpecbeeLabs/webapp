@@ -9,16 +9,16 @@ button, .button {
 	text-decoration: none;
   background-color: $color--accent;
   color: $color--accent-contrast;
-	padding: 1rem 3rem;
+	padding: $button-vertical-padding $button-horizontal-padding;
 	font-size: .75rem;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: $font--semibold;
 	letter-spacing: 3px;
 	border-radius: 2px;
 	text-align: center;
 	position: relative;
 	outline: none;
-	@include transition(.25s, all, ease-in-out);
+  @include transition($transition-time--base all ease-in-out);
   cursor: pointer;
   &:hover {
     background-color: darken($color--accent, 5%);

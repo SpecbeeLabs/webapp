@@ -28,14 +28,6 @@ $font-size--small: .875;
 $font-size--base: 1rem;
 $font-size--large: 1.5rem;
 
-/* Spacings and widths */
-$layout--container-max-width: 75rem;
-$grid-columns: 12;
-$grid--gutter: .75rem;
-$spacing--small: .5rem;
-$spacing--medium: 1rem;
-$spacing--large: 1.5rem;
-
 /* Transitions */
 $transition-time--base: .5s;
 
@@ -46,3 +38,15 @@ $bp-smaller-than-desktop: "max-width: 75rem" !default;
 $bp-larger-than-mobile: "min-width: 40rem" !default;
 $bp-larger-than-tablet: "min-width: 64rem" !default;
 $bp-larger-than-desktop: "min-width: 75rem" !default;
+
+/* Spacings and widths */
+$layout--container-max-width: 75rem;
+$grid-columns: 12;
+$grid--gutter: .75rem;
+$spacing--small: .5rem;
+$spacing--medium: 1rem;
+$spacing--large: 1.5rem;
+
+/** Button settings **/
+$button-horizontal-padding: 2rem;
+$button-vertical-padding: 1rem;
