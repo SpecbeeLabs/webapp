@@ -6,28 +6,28 @@
 
 /* Brand Colors */
 
-$color--primary: #2196F3;
-$color--secondary: #cc0000;
-$color--tertiary: #3d3d3d;
+$color--primary: #2196F3 !default;
+$color--secondary: #cc0000 !default;
+$color--tertiary: #3d3d3d !default;
 // Additional brand colors
 /** Add any additional color supplied in the style guide **/
 
-/* Accent colors */
-$color--accent: $color--secondary;
-$color--accent-contrast: #fff;
-$color--selected-text: $color--accent-contrast;
-$color--selected-bg: $color--accent;
-
 /* Grayscale colors */
-$color--white: #fff;
-$color--black: #0f0f0f;
-$color--whisper: #f2f2f2;
-$color--light-grey: #a0a0a0;
-$color--grey: #6a6a6a;
-$color--dark-grey: #484848;
-$color--grey-input: #dddddd;
+$color--white: #fff !default;
+$color--white-smoke   : #F5F5F5 !default;
+$color--whisper: #EEEEEE !default;
+$color--light-grey: #CCCCCC !default;
+$color--grey: #6a6a6a !default;
+$color--dark-grey: #484848 !default;
+$color--black: #0f0f0f !default;
+
+/* Accent colors */
+$color--accent: $color--secondary !default;
+$color--accent-contrast: $color--white !default;
+$color--selected-text: $color--accent-contrast !default;
+$color--selected-bg: $color--accent !default;
 
 /* Third party brand colors */
-$color--facebook : #03539e;
-$color--twitter : #35ccff;
-$color--linkedin : #217bc1;
+$color--facebook: #03539e !default;
+$color--twitter: #35ccff !default;
+$color--linkedin: #217bc1 !default;
