@@ -1,0 +1,54 @@
+/**
+* Form styling
+**/
+
+.form {
+  display: block;
+  overflow: inherit;
+  position: relative;
+  .form__item {
+    display: block;
+    margin-bottom: 1.25rem;
+    clear: both;
+    label {
+      display: block;
+      font-weight: $font--bold;
+      color: $color--dark-grey;
+      margin-bottom: .25rem;
+    }
+  }
+  .form__input {
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(.375em - 1px);
+    padding-left: calc(.625em - 1px);
+    padding-right: calc(.625em - 1px);
+    padding-top: calc(.375em - 1px);
+    position: relative;
+    vertical-align: middle;
+  }
+  input[type="text"], .form__textarea {
+    background-color: $color--white;
+    border: 1px solid $color--light-grey;
+    color: $color--black;
+    box-shadow: none;
+    max-width: 100%;
+    width: 100%;
+  }
+  .form__textarea {
+    min-height: rem(120);
+    max-height: rem(600);
+  }
+  .form__radio, .form__checkbox {
+    font-weight: $font--regular !important;
+    input {
+      cursor: pointer;
+      display: inline-block;
+      line-height: 1.25;
+      position: relative;
+    }
+  }
+}

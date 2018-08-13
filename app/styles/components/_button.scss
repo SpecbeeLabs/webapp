@@ -5,19 +5,19 @@
 
 button, .button {
   display: inline-block;
-	border: none;
-	text-decoration: none;
+  border: none;
+  text-decoration: none;
   background-color: $color--accent;
   color: $color--accent-contrast;
-	padding: $button-vertical-padding $button-horizontal-padding;
-	font-size: .75rem;
-	text-transform: uppercase;
-	font-weight: $font--semibold;
-	letter-spacing: 3px;
-	border-radius: 2px;
-	text-align: center;
-	position: relative;
-	outline: none;
+  padding: $button-vertical-padding $button-horizontal-padding;
+  font-size: .75rem;
+  text-transform: uppercase;
+  font-weight: $font--semibold;
+  letter-spacing: .5px;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: none;
   @include transition($transition-time--base all ease-in-out);
   cursor: pointer;
   &:hover {
@@ -34,6 +34,16 @@ button, .button {
     &:hover {
       border-color: darken($color--accent, 5%);
       color: darken($color--accent, 5%);
+    }
+  }
+  &.button--text {
+    background: transparent;
+    border: none;
+    color: $color--dark-grey;
+    text-decoration: underline;
+    text-transform: capitalize;
+    &:hover {
+      background: $color--whisper;
     }
   }
 }

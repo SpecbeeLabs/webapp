@@ -13,7 +13,7 @@
     <div class="grid">
       {#first block#}
       <div class="grid__item grid--2">
-        {% embed "src/partials/block.twig" %}
+        {% embed "src/partials/examples/block.twig" %}
           {% set block_name = "first--block" %}
           {% set block_id = "blockid" %}
           {% set block_label = "This is a test block" %}
@@ -24,7 +24,7 @@
       </div>
       {#second block#}
       <div class="grid__item grid--4">
-        {% embed "src/partials/block.twig" %}
+        {% embed "src/partials/examples/block.twig" %}
           {% set block_name = "second--block" %}
           {% set block_id = "blockidtwo" %}
           {% set block_label = "This is a second test block" %}
@@ -35,7 +35,7 @@
       </div>
       {# third block #}
       <div class="grid__item grid--6">
-        {% embed "src/partials/block.twig" %}
+        {% embed "src/partials/examples/block.twig" %}
           {% set block_name = "third--block" %}
           {% set block_id = "blockidthree" %}
           {% set block_label = "This is a third test block" %}
@@ -49,7 +49,7 @@
   <hr>
   <section>
     <h2>Article demo</h2>
-    {% embed  "src/partials/article.twig" %}
+    {% embed  "src/partials/examples/article.twig" %}
       {% set article_type = "node" %}
       {% set article_title = "This the title of the article" %}
       {% set article_author = "Specbee author" %}
@@ -57,7 +57,11 @@
       {% set article_content = "Proactively facilitate premium opportunities with vertical products. Interactively embrace inexpensive total linkage through seamless."%}
     {% endembed %}
   </section>
+  <hr>
   <section>
-    {% include "src/partials/button.twig" %}
+    {% include "src/partials/examples/form.twig" %}
+  </section>
+  <section>
+    {% include "src/partials/examples/button.twig" %}
   </section>
 {% endblock %}
