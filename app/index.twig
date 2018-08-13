@@ -46,6 +46,17 @@
       </div>
     </div>
   </section>
+  <hr>
+  <section>
+    <h2>Article demo</h2>
+    {% embed  "src/partials/article.twig" %}
+      {% set article_type = "node" %}
+      {% set article_title = "This the title of the article" %}
+      {% set article_author = "Specbee author" %}
+      {% set article_media = "http://maximusnew.specbee.in/sites/default/files/default_images/case-01_0.jpg" %}
+      {% set article_content = "Proactively facilitate premium opportunities with vertical products. Interactively embrace inexpensive total linkage through seamless."%}
+    {% endembed %}
+  </section>
   <section>
     {% include "src/partials/button.twig" %}
   </section>

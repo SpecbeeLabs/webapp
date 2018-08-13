@@ -1,0 +1,31 @@
+/**
+* Article styling
+**/
+
+.article {
+  position: relative;
+  border-bottom: 1px dotted $color--light-grey;
+  @include grid();
+  margin: 0 0 .75rem 0 !important;
+  padding-bottom: .75rem;
+  .article__media {
+    @include bp-small {
+      max-width: 30%;
+      margin-right: 1.75rem;
+    }
+    figure {
+      @include reset();
+    }
+  }
+  .article__content {
+    flex: 1 1 auto;
+    .article__title {
+      margin: 0 0 .5rem;
+    }
+    .article__meta {
+      font-size: $font-size--small;
+      opacity: .75;
+      margin-bottom: .875rem;
+    }
+  }
+}

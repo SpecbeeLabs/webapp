@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+.clearfix {
+  @include clearfix();
+}
+
 body {
   max-width: $layout--container-max-width;
   margin: auto;
