@@ -3,69 +3,82 @@
 {% set pageName = 'Homepage' %}
 
 {% block page %}
-<img class="loaded" src="https://cdn-images-1.medium.com/max/2000/1*lpWLZ75HSCAYYQvx0wxYDQ.png" alt="This is the alt text" title="Title of the image"/>
+  <img class="loaded" src="https://cdn-images-1.medium.com/max/2000/1*lpWLZ75HSCAYYQvx0wxYDQ.png"
+       alt="This is the alt text" title="Title of the image"/>
   <header>
     <h1>Web Generator, Gulp and Twig.js</h1>
   </header>
   <hr>
-  <section>
-  <h2 class="title">Grid and block demo</h2>
+  <main>
     <div class="grid">
-      {#first block#}
-      <div class="grid__item grid--2">
-        {% embed "src/partials/examples/block.twig" %}
-          {% set block_name = "first--block" %}
-          {% set block_id = "blockid" %}
-          {% set block_label = "This is a test block" %}
-          {% block content %}
-            <p>This is the content of the block</p>
-          {% endblock %}
-        {% endembed %}
+      <div class="grid__item grid--8">
+        <section>
+          <h2 class="title">Grid and block demo</h2>
+          <div class="grid">
+            {#first block#}
+            <div class="grid__item">
+              {% embed "src/partials/examples/block.twig" %}
+                {% set block_name = "first--block" %}
+                {% set block_id = "blockid" %}
+                {% set block_label = "This is a test block" %}
+                {% block content %}
+                  <p>This is the content of the block</p>
+                {% endblock %}
+              {% endembed %}
+            </div>
+            {#second block#}
+            <div class="grid__item grid--6">
+              {% embed "src/partials/examples/block.twig" %}
+                {% set block_name = "second--block" %}
+                {% set block_id = "blockidtwo" %}
+                {% set block_label = "This is a second test block" %}
+                {% block content %}
+                  <p>This is the <a href="#">content</a> of the second block</p>
+                {% endblock %}
+              {% endembed %}
+            </div>
+          </div>
+        </section>
+        <hr>
+        <section>
+          <h2>Article demo</h2>
+          {% embed  "src/partials/examples/article.twig" %}
+            {% set article_type = "node" %}
+            {% set article_title = "This the title of the article" %}
+            {% set article_author = "Specbee author" %}
+            {% set article_media = "http://maximusnew.specbee.in/sites/default/files/default_images/case-01_0.jpg" %}
+            {% set article_content = "Proactively facilitate premium opportunities with vertical products. Interactively embrace inexpensive total linkage through seamless." %}
+          {% endembed %}
+          {% embed  "src/partials/examples/article.twig" %}
+            {% set article_type = "node" %}
+            {% set article_title = "This is another article" %}
+            {% set article_author = "Specbee author" %}
+            {% set article_media = "http://maximusnew.specbee.in/sites/default/files/default_images/case-01_0.jpg" %}
+            {% set article_content = "Proactively facilitate premium opportunities with vertical products. Interactively embrace inexpensive total linkage through seamless." %}
+          {% endembed %}
+          {% embed  "src/partials/examples/article.twig" %}
+            {% set article_type = "node" %}
+            {% set article_title = "Blah Blah Blah!!!" %}
+            {% set article_author = "Specbee author" %}
+            {% set article_media = "http://maximusnew.specbee.in/sites/default/files/default_images/case-01_0.jpg" %}
+            {% set article_content = "Proactively facilitate premium opportunities with vertical products. Interactively embrace inexpensive total linkage through seamless." %}
+          {% endembed %}
+        </section>
+        <hr>
+        <section>
+          {% include "src/partials/examples/table.twig" %}
+        </section>
+        <section>
+          {% include "src/partials/examples/button.twig" %}
+        </section>
       </div>
-      {#second block#}
-      <div class="grid__item grid--4">
-        {% embed "src/partials/examples/block.twig" %}
-          {% set block_name = "second--block" %}
-          {% set block_id = "blockidtwo" %}
-          {% set block_label = "This is a second test block" %}
-          {% block content %}
-            <p>This is the <a href="#">content</a> of the second block</p>
-          {% endblock %}
-        {% endembed %}
-      </div>
-      {# third block #}
-      <div class="grid__item grid--6">
-        {% embed "src/partials/examples/block.twig" %}
-          {% set block_name = "third--block" %}
-          {% set block_id = "blockidthree" %}
-          {% set block_label = "This is a third test block" %}
-          {% block content %}
-            <p>This is the <a href="#">content</a> of the second block</p>
-          {% endblock %}
-        {% endembed %}
-      </div>
+      <aside class="grid__item grid--4">
+        <section>
+          <h2>Form Demo</h2>
+          {% include "src/partials/examples/form.twig" %}
+        </section>
+      </aside>
     </div>
-  </section>
-  <hr>
-  <section>
-    <h2>Article demo</h2>
-    {% embed  "src/partials/examples/article.twig" %}
-      {% set article_type = "node" %}
-      {% set article_title = "This the title of the article" %}
-      {% set article_author = "Specbee author" %}
-      {% set article_media = "http://maximusnew.specbee.in/sites/default/files/default_images/case-01_0.jpg" %}
-      {% set article_content = "Proactively facilitate premium opportunities with vertical products. Interactively embrace inexpensive total linkage through seamless."%}
-    {% endembed %}
-  </section>
-  <hr>
-  <section>
-    {% include "src/partials/examples/form.twig" %}
-  </section>
-  <hr>
-  <section>
-    {% include "src/partials/examples/table.twig" %}
-  </section>
-  <section>
-    {% include "src/partials/examples/button.twig" %}
-  </section>
+  </main>
+
 {% endblock %}
