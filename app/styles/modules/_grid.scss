@@ -8,8 +8,6 @@
   align-content: flex-start;
   justify-content: space-between;
   @include bp-small {
-    margin-left: -$grid--gutter;
-    margin-right: -$grid--gutter;
     margin-top: -$grid--gutter;
     margin-bottom: $grid--gutter;
   }
