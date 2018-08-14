@@ -80,6 +80,36 @@
           <h2>Form Demo</h2>
           {% include "src/partials/examples/form.twig" %}
         </section>
+        <section>
+          <h3>Vertical Menu</h3>
+          <ul class="menu menu--vertical">
+            <li class="menu__label">General</li>
+            <ul class="menu menu--vertical">
+              <li class="menu__item"><a href="" class="menu__link">Dashboard</a></li>
+              <li class="menu__item"><a href="" class="menu__link">Customer</a></li>
+            </ul>
+            <li class="menu__label">Administration</li>
+            <ul class="menu menu--vertical">
+              <li class="menu__item">
+                <a class="menu__link" href="">Team Settings</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link is-active" href="">Manage Team</a>
+                <ul class="menu menu--vertical">
+                  <li class="menu__item"><a href="" class="menu__link">Member</a></li>
+                  <li class="menu__item"><a href="" class="menu__link">Add a Member</a></li>
+                  <li class="menu__item"><a href="" class="menu__link">Remove a Member</a></li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Invitations</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Cloud Storage Environment Settings</a>
+              </li>
+            </ul>
+          </ul>
+        </section>
       </aside>
     </div>
   </main>

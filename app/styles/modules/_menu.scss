@@ -12,6 +12,18 @@
   @include bp-medium() {
     flex-direction: row;
   }
+  &.menu--vertical {
+    flex-direction: column;
+    .menu__item {
+      margin-bottom: 2px;
+    }
+  }
+  .menu__label {
+    text-transform: uppercase;
+    color: $color--grey;
+    font-size: $font-size--small;
+    margin: 1rem 0;
+  }
   .menu__item {
     position: relative;
     overflow: visible;
@@ -22,15 +34,54 @@
       line-height: 1;
       display: block;
       text-decoration: none;
-      padding: $menu-link-padding;
-      background: $color--white;
+      padding: $menu--link-padding;
+      background: none;
+      color: $color--black;
       @include transition($transition-time--base all ease-in-out);
       &:hover {
         background: $color--white-smoke;
       }
       &.is-active {
-        background: $color--white-smoke;
+        background: $color--accent;
+        color: $color--accent-contrast;
         font-weight: $font--semibold;
+      }
+    }
+    > .menu {
+      margin: .75rem 1.5rem;
+      padding-left: 1.5rem;
+      border-left: 1px solid $color--light-grey;
+    }
+  }
+}
+
+//Dropdown Menu
+.menu {
+  .menu__item--expanded {
+    position: relative;
+    > .menu {
+      z-index: -1;
+      flex-direction: column;
+      margin: 0;
+      border: none;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 2rem;
+      background: $color--whisper;
+      padding: $menu--link-padding;
+      min-width: $menu--submenu-min-width;
+      @include transition($transition-time--base all ease-in-out);
+      .menu__link {
+        background: none;
+        color: $color--dark-grey;
+      }
+    }
+    &:hover {
+      > .menu {
+        opacity: 1;
+        visibility: visible;
+        top: 2.5rem;
       }
     }
   }
