@@ -1,0 +1,33 @@
+/**
+* Menu styling
+**/
+
+.menu {
+  @include no-bullet();
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  .menu__item {
+    position: relative;
+    overflow: visible;
+    outline: 0;
+    flex: 0 0 auto;
+    margin-right: 2px;
+    .menu__link {
+      line-height: 1;
+      display: block;
+      text-decoration: none;
+      padding: $menu-link-padding;
+      background: $color--white;
+      @include transition($transition-time--base all ease-in-out);
+      &:hover {
+        background: $color--white-smoke;
+      }
+      &.is-active {
+        background: $color--white-smoke;
+        font-weight: $font--semibold;
+      }
+    }
+  }
+}
