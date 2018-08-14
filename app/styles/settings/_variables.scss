@@ -48,9 +48,18 @@ $spacing--medium: 1rem;
 $spacing--large: 1.5rem;
 
 /** Button settings **/
-$button-horizontal-padding: 2rem;
-$button-vertical-padding: 1rem;
+$button--padding-left: 2rem !default;
+$button--padding-right: 2rem !default;
+$button--padding-top: 1rem !default;
+$button--padding-bottom: 1rem !default;
+$button--horizontal-padding: $button--padding-left;
+$button--vertical-padding: $button--padding-top;
 
 /** Menu settings **/
-$menu--link-padding: .75rem 1rem;
+$menu--link-padding-left: 1rem;
+$menu--link-padding-right: 1rem;
+$menu--link-padding-top: .75rem;
+$menu--link-padding-bottom: .75rem;
+$menu--link-padding-horizontal: 1rem;
+$menu--link-padding-vertical: .75rem;
 $menu--submenu-min-width: 12.5rem;

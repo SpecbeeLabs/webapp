@@ -35,7 +35,7 @@
       line-height: 1;
       display: block;
       text-decoration: none;
-      padding: $menu--link-padding;
+      padding: $menu--link-padding-vertical $menu--link-padding-horizontal;
       background: none;
       color: $color--black;
       @include transition($transition-time--base all ease-in-out);
@@ -60,6 +60,16 @@
 .menu {
   .menu__item--expanded {
     position: relative;
+    &>.menu__link {
+      padding-right: $menu--link-padding-right + .5rem;
+      &:after {
+        @include triangle('down', 6px, $color--primary);
+        @include translate(-50%, 0);
+        position: absolute;
+        top: 50%;
+        right: .5rem;
+      }
+    }
     > .menu {
       z-index: -1;
       flex-direction: column;
@@ -70,7 +80,7 @@
       position: absolute;
       top: 2rem;
       background: $color--whisper;
-      padding: $menu--link-padding;
+      padding: $menu--link-padding-vertical $menu--link-padding-horizontal;
       min-width: $menu--submenu-min-width;
       @include transition($transition-time--base all ease-in-out);
       .menu__link {
