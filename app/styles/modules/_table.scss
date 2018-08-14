@@ -16,6 +16,10 @@ table {
     padding: .75rem 1rem;
     text-align: left;
     line-height: 1;
+    @include bp-xs-small {
+      padding: .4rem .4rem;
+    }
+
   }
   tr {
     &:nth-of-type(even) {
