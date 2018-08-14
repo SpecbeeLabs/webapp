@@ -1,0 +1,33 @@
+/**
+* Navbar styling.
+**/
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  .navbar__branding {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
+    line-height: inherit;
+    white-space: nowrap;
+    .navbar__branding__logo {
+      margin-right: 1rem;
+    }
+    .navbar__branding__name {
+      font-size: 2rem;
+      font-family: $font-family--secondary;
+    }
+    .navbar__branding__slogan {
+      font-size: $font-size--small;
+      color: $color--grey;
+    }
+  }
+  .navbar__collapse {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+  }
+}

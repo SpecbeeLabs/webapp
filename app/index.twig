@@ -3,11 +3,9 @@
 {% set pageName = 'Homepage' %}
 
 {% block page %}
-  <img class="loaded" src="https://cdn-images-1.medium.com/max/2000/1*lpWLZ75HSCAYYQvx0wxYDQ.png"
-       alt="This is the alt text" title="Title of the image"/>
   <main class="main layout-container" id="main">
     <header>
-      <h1>Web Generator, Gulp and Twig.js</h1>
+      {% include "src/partials/examples/navbar.twig" %}
     </header>
     <hr>
     <div class="grid">

@@ -51,4 +51,14 @@
       position: relative;
     }
   }
+  &.form--inline {
+    display: inline-flex;
+    >.form__item {
+      margin-right: 1rem;
+      margin-bottom: 0;
+    }
+    button, .button {
+      margin-bottom: 0;
+    }
+  }
 }

@@ -10,12 +10,8 @@
   */
 
 /* Font familys */
-$font-family--primary: 'Helvetica Neue',
-'Helvetica',
-'Comic Sans',
-sans-serif;
-$font-family--secondary: 'Georgia',
-'Times New Roman' serif;
+$font-family--primary: 'Helvetica Neue', 'Helvetica', 'Comic Sans', sans-serif;
+$font-family--secondary: Georgia, "Times New Roman", Times, serif;
 
 /* Font weight */
 $font--light: 300;

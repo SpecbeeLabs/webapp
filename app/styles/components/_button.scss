@@ -47,4 +47,10 @@ button, .button {
       background: $color--whisper;
     }
   }
+  &.button--small {
+    padding: $button--vertical-padding - .5rem $button--horizontal-padding - .5rem;
+  }
+  &.button--big {
+    padding: $button--vertical-padding + .5rem $button--horizontal-padding + .5rem;
+  }
 }
