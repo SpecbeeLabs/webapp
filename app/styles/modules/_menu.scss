@@ -27,6 +27,7 @@
   .menu__item {
     position: relative;
     overflow: visible;
+    white-space: nowrap;
     outline: 0;
     flex: 0 0 auto;
     margin-right: 2px;
@@ -75,6 +76,9 @@
       .menu__link {
         background: none;
         color: $color--dark-grey;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
     &:hover {
