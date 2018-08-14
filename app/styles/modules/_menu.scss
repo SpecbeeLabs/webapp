@@ -5,9 +5,13 @@
 .menu {
   @include no-bullet();
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-content: center;
+  @include bp-medium() {
+    flex-direction: row;
+  }
   .menu__item {
     position: relative;
     overflow: visible;
