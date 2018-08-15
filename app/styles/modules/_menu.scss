@@ -27,10 +27,13 @@
   .menu__item {
     position: relative;
     overflow: visible;
-    white-space: nowrap;
+    white-space: unset;
     outline: 0;
     flex: 0 0 auto;
     margin-right: 2px;
+    @include bp-medium(){
+      white-space: nowrap;
+    }
     .menu__link {
       line-height: 1;
       display: block;
