@@ -7,12 +7,21 @@
   </head>
 {% endblock %}
 <body>
+  <header class="header" id="header" role="banner" aria-label="Site header">
+    <div class="layout-container">
+      {% include "../partials/examples/navbar.twig" %}
+      {% block header %}{% endblock %}
+    </div>
+  </header>
 
-{% block page %}{% endblock %}
+  <main class="main" id="main" role="main" aria-label="Site main content">
+    {% block content %}{% endblock %}
+  </main>
 
-  <footer>
+  <footer class="footer" id="footer" role="contentinfo" aria-label="Site footer">
     {% include '../partials/footer.twig' %}
     {% block footer %}{% endblock %}
   </footer>
+
 </body>
 </html>

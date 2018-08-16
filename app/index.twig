@@ -2,12 +2,8 @@
 {% extends "src/layout/layout.twig" %}
 {% set pageName = 'Homepage' %}
 
-{% block page %}
-  <main class="main layout-container" id="main">
-    <header>
-      {% include "src/partials/examples/navbar.twig" %}
-    </header>
-    <hr>
+{% block content %}
+  <div class="layout-container">
     <div class="grid">
       <div class="grid__item grid--8">
         <section>
@@ -69,9 +65,6 @@
         <section>
           {% include "src/partials/examples/button.twig" %}
         </section>
-        <section>
-          {% include "src/partials/examples/menu.twig" %}
-        </section>
       </div>
       <aside class="grid__item grid--4">
         <section>
@@ -110,6 +103,6 @@
         </section>
       </aside>
     </div>
-  </main>
-
+  </div>
 {% endblock %}
+

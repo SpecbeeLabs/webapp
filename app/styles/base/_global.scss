@@ -30,6 +30,13 @@ body {
   padding-right: $grid--gutter * 1.5;
 }
 
+.layout-container-fluid {
+  padding-left: $grid--gutter;
+  padding-right: $grid--gutter;
+  max-width: none;
+  width: auto;
+}
+
 article, aside, figure, footer, header, hgroup, section {
   display: block;
 }
