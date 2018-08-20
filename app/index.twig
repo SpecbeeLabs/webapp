@@ -1,41 +1,60 @@
-{# index.twig #}
-{% extends "src/layout/layout.twig" %}
-{% set pageName = 'Homepage' %}
+{# index.twig #} {% extends "src/layout/layout.twig" %} {% set pageName = 'Homepage' %} {% block page %}
+<header>
+  {% include "src/partials/header.twig" %}
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1 class="text-center">Grid Layout</h1>
+    </div>
+  </div>
+</div>
 
-{% block page %}
-  <header>
-    <h1>Web Generator, Gulp and Twig.js</h1>
-  </header>
-  <section>
-    {% include "src/partials/social.twig" %}
-  </section>
-  <aside>
-
-    {#first block#}
-    {% embed "src/partials/block.twig" %}
-      {% set block_name = "test first--block" %}
-      {% set block_id = "blockid" %}
-      {% set block_label = "This is a test block" %}
-      {% block content %}
-        <p>This is the content of the block</p>
-      {% endblock %}
-    {% endembed %}
-
-    {#second block#}
-    {% embed "src/partials/block.twig" %}
-      {% set block_name = "test second--block" %}
-      {% set block_id = "blockidtwo" %}
-      {% set block_label = "This is a second test block" %}
-      {% block content %}
+<section>
+  {% include "src/partials/social.twig" %}
+</section>
+<section>
+  <div class="container mt-30">
+    <div class="row">
+      <div class="col-sm-6">
+        {#first block#}
+         {% embed "src/partials/block.twig" %}
+          {% set block_name = "test first--block" %}
+            {% set block_id = "blockid" %}
+            {% set block_label = "This is a test block" %}
+              {% block content %}
+                    <p>This is the content of the block</p>
+                {% endblock %} 
+        {% endembed %}
+      </div>
+      {#second block#}
+      <div class="col-sm-6">
+        {% embed "src/partials/block.twig" %} 
+        {% set block_name = "test second--block" %}
+         {% set block_id = "blockidtwo" %} 
+         {% set block_label = "This is a second test block" %}
+          {% block content %}
         <p>This is the content of the second block</p>
-      {% endblock %}
-    {% endembed %}
+        {% endblock %} {% endembed %}
+      </div>
+    </div>
+  </div>
+</section>
 
-  </aside>
-  <section>
-    {% include "src/partials/social.twig" %}
-  </section>
-  <p>
-    The copy will have a working implementation of Yeoman Web Generator, Gulp & Twig.js with BrowserSync integrated.
-  </p>
+<section>
+  {% include "src/partials/form.twig" %}
+</section>
+
+
+<section>
+  {% include "src/partials/card.twig" %}
+</section>
+
+
+<section>
+  {% include "src/partials/table.twig" %}
+</section>
+<p>
+  The copy will have a working implementation of Yeoman Web Generator, Gulp & Twig.js with BrowserSync integrated.
+</p>
 {% endblock %}

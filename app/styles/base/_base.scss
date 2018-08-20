@@ -4,4 +4,27 @@
 
 @import "normalize";
 @import "functions";
-@import "mixins";
+@import "variables";
+
+@import "mixins/breakpoints";
+@import "mixins/image";
+@import "mixins/buttons";
+@import "mixins/transition";
+@import "mixins/hover";
+@import "mixins/box-shadow";
+@import "mixins/clearfix";
+@import "mixins/gradients";
+@import "mixins/grid-framework";
+@import "mixins/grid";
+@import "mixins/float";
+@import "mixins/nav-divider";
+@import "mixins/border-radius";
+@import "mixins/forms";
+@import "mixins/table-row";
+
+
+@import "reboot";
+@import "mixins/background-variant";
+
+
+
